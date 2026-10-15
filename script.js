@@ -163,3 +163,61 @@ flowSteps.forEach(step => {
     document.querySelector("#flowDetailText").textContent = flowDetails[index].text;
   });
 });
+
+// char bawah
+const characterPicker = document.querySelector("#characterPicker");
+let selectedCharacter = "bima";
+try {
+  const saved = localStorage.getItem("atr-selected-character");
+  if (characters.some(character => character.id === saved)) selectedCharacter = saved;
+} catch (_) { /* tetap bisa dibuka secara lokal jika storage dibatasi browser */ }
+
+function selectCharacter(id) {
+  const chosen = characters.find(character => character.id === id);
+  if (!chosen) return;
+  selectedCharacter = id;
+  document.querySelectorAll(".character-card").forEach(card => {
+    const active = card.dataset.character === id;
+    card.classList.toggle("is-selected", active);
+    card.setAttribute("aria-pressed", String(active));
+  });
+  document.querySelector("#selectedCharacterImage").src = chosen.image;
+  document.querySelector("#selectedCharacterImage").alt = `Ilustrasi ${chosen.name}, ${chosen.gender}, ${chosen.role}`;
+  document.querySelector("#selectedCharacterNum").textContent = chosen.number;
+  document.querySelector(".preview-watermark").textContent = chosen.number;
+  document.querySelector("#selectedCharacterName").textContent = chosen.name;
+  document.querySelector("#selectedCharacterType").textContent = chosen.type;
+  document.querySelector("#selectedCharacterDesc").textContent = chosen.description;
+  document.querySelector("#selectedCharacterRole").textContent = chosen.role;
+  document.querySelector("#selectedCharacterTrait").textContent = chosen.trait;
+  document.querySelector("#selectedCharacterStatus").textContent = `${chosen.name} dipilih untuk pratinjau karakter.`;
+  try { localStorage.setItem("atr-selected-character", id); } catch (_) { /* optional */ }
+}
+
+characters.forEach(character => {
+  const card = document.createElement("button");
+  card.type = "button";
+  card.className = "character-card";
+  card.dataset.character = character.id;
+  card.setAttribute("aria-label", `Pratinjau ${character.name}, ${character.gender}`);
+  card.setAttribute("aria-pressed", "false");
+  card.style.setProperty("--char-color", character.color);
+  const art = document.createElement("div");
+  art.className = "character-card-art";
+  const img = document.createElement("img");
+  img.src = character.image;
+  img.alt = "";
+  img.loading = "lazy";
+  art.append(img);
+  const label = document.createElement("div");
+  label.className = "character-card-label";
+  const name = document.createElement("strong");
+  name.textContent = character.name;
+  const gender = document.createElement("small");
+  gender.textContent = character.gender;
+  label.append(name, gender);
+  card.append(art, label);
+  card.addEventListener("click", () => selectCharacter(character.id));
+  characterPicker.append(card);
+});
+selectCharacter(selectedCharacter);
