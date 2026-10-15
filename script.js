@@ -78,3 +78,72 @@ const sectionObserver = new IntersectionObserver(entries => {
 }, { rootMargin: "-24% 0px -64% 0px" });
 sections.forEach(section => sectionObserver.observe(section));
 
+//member bawah
+const teamCards = document.querySelector("#teamCards");
+const githubGrid = document.querySelector("#githubGrid");
+teamMembers.forEach((member, index) => {
+  const card = document.createElement("button");
+  card.className = "team-card";
+  card.type = "button";
+  card.style.setProperty("--tone", member.color);
+  card.setAttribute("aria-expanded", "false");
+  card.setAttribute("aria-label", `Lihat profil ${member.name}, ${member.role}`);
+  const img = document.createElement("img");
+  img.src = member.image;
+  img.alt = "";
+  img.loading = "lazy";
+  const indexTag = document.createElement("span");
+  indexTag.className = "team-card-index";
+  indexTag.textContent = String(index + 1).padStart(2, "0");
+  const corner = document.createElement("span");
+  corner.className = "team-card-corner";
+  corner.setAttribute("aria-hidden", "true");
+  corner.textContent = "↗";
+  const bottom = document.createElement("div");
+  bottom.className = "team-card-bottom";
+  const role = document.createElement("span");
+  role.className = "team-card-role";
+  role.textContent = member.role;
+  const name = document.createElement("h3");
+  name.className = "team-card-name";
+  name.textContent = member.name;
+  const expanded = document.createElement("div");
+  expanded.className = "team-card-expanded";
+  const bio = document.createElement("span");
+  bio.textContent = member.bio;
+  const githubText = document.createElement("span");
+  githubText.className = "member-github";
+  githubText.textContent = `@${member.github || member.placeholder}`;
+  expanded.append(bio, document.createElement("br"), githubText);
+  bottom.append(role, name, expanded);
+  card.append(img, indexTag, corner, bottom);
+  card.addEventListener("click", () => {
+    const wasOpen = card.classList.contains("is-active");
+    const cards = teamCards.querySelectorAll(".team-card");
+    cards.forEach(c => { c.classList.remove("is-active"); c.setAttribute("aria-expanded", "false"); });
+    if (wasOpen) teamCards.classList.remove("has-active");
+    else { teamCards.classList.add("has-active"); card.classList.add("is-active"); card.setAttribute("aria-expanded", "true"); }
+  });
+  teamCards.appendChild(card);
+
+  const git = document.createElement(member.github ? "a" : "div");
+  git.className = `github-card${member.github ? "" : " disabled"}`;
+  if (member.github) {
+    git.href = `https://github.com/${encodeURIComponent(member.github.replace(/^@/, ""))}`;
+    git.target = "_blank";
+    git.rel = "noopener noreferrer";
+    git.setAttribute("aria-label", `GitHub ${member.name}: ${member.github}`);
+  }
+  const icon = document.createElement("span");
+  icon.className = "github-icon";
+  icon.textContent = String(index + 1).padStart(2, "0");
+  const detail = document.createElement("span");
+  detail.className = "github-details";
+  const label = document.createElement("small");
+  label.textContent = member.name;
+  const username = document.createElement("strong");
+  username.textContent = `@${(member.github || member.placeholder).replace(/^@/, "")}`;
+  detail.append(label, username);
+  git.append(icon, detail);
+  githubGrid.appendChild(git);
+});
