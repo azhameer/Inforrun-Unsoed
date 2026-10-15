@@ -221,3 +221,20 @@ characters.forEach(character => {
   characterPicker.append(card);
 });
 selectCharacter(selectedCharacter);
+
+//footer
+const revealNodes = document.querySelectorAll(".reveal");
+if (reduceMotion || !("IntersectionObserver" in window)) {
+  revealNodes.forEach(node => node.classList.add("visible"));
+} else {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: .1 });
+  revealNodes.forEach(node => revealObserver.observe(node));
+}
+
+document.querySelector("#currentYear").textContent = String(new Date().getFullYear());
