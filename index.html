@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#112c27" />
+  <meta name="description" content="ATR Learning adalah konsep Adaptive Task Recommendation untuk pembelajaran berbasis game quest 2D semi-open world." />
+  <title>ATR Learning — Petualangan Belajar yang Adaptif</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#beranda">Lewati ke konten</a>
+  <header class="site-header" id="siteHeader">
+    <nav class="nav shell" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="ATR Learning, kembali ke beranda">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>ATR <b>LEARNING</b><small>ADAPTIVE TASK RECOMMENDATION</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link active" href="#beranda">Beranda</a>
+        <a class="nav-link" href="#tim">Tim Kami</a>
+        <a class="nav-link" href="#gagasan">Awal Gagasan</a>
+        <a class="nav-link" href="#alur">Alur Sistem</a>
+        <a class="nav-link" href="#karakter">Karakter</a>
+      </div>
+      <a class="nav-contact" href="#footer">GitHub Tim <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 01 - BERANDA -->
+    <section class="hero" id="beranda" aria-labelledby="heroHeading">
+      <div class="hero-scene" aria-hidden="true"></div>
+      <div class="hero-mist" aria-hidden="true"></div>
+      <div class="hero-sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="shell hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow"><span class="mini-star">✦</span> SELAMAT DATANG DI ATR LEARNING <span class="eyebrow-line"></span></div>
+          <p class="hero-intro">Bukan sekadar mengerjakan tugas.</p>
+          <h1 id="heroHeading">Belajar.<br><span class="accent-cream">Bertualang.</span><br><span class="accent-gold">Berkembang.</span></h1>
+          <p class="hero-summary">Kenali gagasan <strong>Adaptive Task Recommendation</strong>—sistem pembelajaran berbasis <em>game quest</em> 2D semi-open world yang mengusulkan misi sesuai kemampuan mahasiswa.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#gagasan">Jelajahi Gagasan <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-glass" href="#alur"><span class="play-icon" aria-hidden="true">▶</span> Lihat Alur Sistem</a>
+          </div>
+          <div class="hero-disclaimer"><span class="status-dot"></span> WEB PENGENALAN KONSEP • BUKAN GAME YANG DAPAT DIMAINKAN</div>
+        </div>
+        <div class="hero-aside">
+          <div class="glass-panel concept-panel">
+            <div class="panel-top"><span>WORLD OVERVIEW</span><span class="panel-tag">CONCEPT 01</span></div>
+            <div class="world-shot" role="img" aria-label="Cuplikan ilustrasi hutan dua dimensi dan dialog quest algoritma"></div>
+            <div class="world-shot-caption"><span><span class="pulse"></span> FOREST QUEST WORLD</span><span>2D <b>·</b> SEMI OPEN WORLD</span></div>
+            <div class="mini-process"><div><b>01</b><span>Pretest</span></div><span class="process-arrow">→</span><div><b>02</b><span>Quest Adaptif</span></div><span class="process-arrow">→</span><div><b>03</b><span>Reward & Kunci</span></div></div>
+          </div>
+          <p class="hero-side-note"><span>✧</span> Dari asesmen awal, menuju petualangan belajar yang lebih personal.</p>
+        </div>
+      </div>
+      <div class="shell hero-bottom">
+        <div class="hero-rotation"><span class="rotation-label">EXPLORE OUR IDEA</span><span class="rotation-divider"></span><span class="rotation-text" id="rotatingText" aria-live="polite">Setiap mahasiswa punya jalur belajar yang berbeda.</span><span class="rotation-dots" id="rotationDots" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></span></div>
+        <a href="#tim" class="scroll-cue">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- 02 - TIM -->
+    <section class="section team-section" id="tim" aria-labelledby="teamHeading">
+      <div class="shell">
+        <div class="section-heading centered reveal">
+          <div class="eyebrow dark"><span class="eyebrow-symbol">✦</span> THE PEOPLE BEHIND THE IDEA</div>
+          <h2 id="teamHeading">Lima Pikiran. <em>Satu Petualangan.</em></h2>
+          <p>Di balik ATR Learning ada lima anggota tim yang membawa peran berbeda untuk mengembangkan dan memperkenalkan konsep pembelajaran adaptif.</p>
+        </div>
+        <div class="team-hint"><span aria-hidden="true">↗</span> Klik salah satu kartu untuk mengenal anggota tim</div>
+        <div class="team-cards" id="teamCards" aria-label="Daftar lima anggota tim">
+          <!-- Kartu anggota dibuat melalui JavaScript agar mudah diubah. -->
+        </div>
+        <div class="team-footnote"><span>01 / 05</span> <span>Setiap peran saling melengkapi dalam pengembangan konsep.</span><span>COLLABORATIVE RESEARCH TEAM</span></div>
+      </div>
+    </section>
+
+    <!-- 03 - AWAL GAGASAN -->
+    <section class="section idea-section" id="gagasan" aria-labelledby="ideaHeading">
+      <div class="shell">
+        <div class="idea-heading reveal"><div class="eyebrow light"><span class="eyebrow-symbol">✦</span> WHY ATR LEARNING EXISTS</div><h2 id="ideaHeading">Setiap gagasan besar<br>dimulai dari <em>sebuah masalah.</em></h2><p>Kami berangkat dari pertanyaan sederhana: bagaimana jika kegiatan belajar di perkuliahan bisa mengikuti kebutuhan setiap mahasiswa, bukan selalu berjalan dengan cara yang sama?</p></div>
+        <div class="idea-layout">
+          <div class="problem-column reveal">
+            <div class="section-overline"><span class="overline-index">01</span><span>AKAR MASALAH</span></div>
+            <div class="problem-card"><span class="problem-icon" aria-hidden="true">◎</span><div><h3>Kemampuan awal yang beragam</h3><p>Mahasiswa masuk ke mata kuliah dengan tingkat pemahaman dan kesiapan belajar yang tidak selalu sama.</p></div></div>
+            <div class="problem-card"><span class="problem-icon" aria-hidden="true">▥</span><div><h3>Tugas yang seragam</h3><p>Penyajian latihan yang sama untuk semua mahasiswa belum tentu sesuai dengan kebutuhan individu.</p></div></div>
+            <div class="problem-card"><span class="problem-icon" aria-hidden="true">⌁</span><div><h3>Keterlibatan belajar</h3><p>Aktivitas belajar membutuhkan pengalaman yang lebih eksploratif, menarik, dan memberikan umpan balik.</p></div></div>
+            <div class="problem-base">THE CHALLENGE <span aria-hidden="true">↗</span> <b>ONE SIZE DOESN'T FIT ALL.</b></div>
+          </div>
+          <div class="solution-column reveal">
+            <div class="section-overline"><span class="overline-index gold-index">02</span><span>GAGASAN SOLUSI</span></div>
+            <div class="solution-feature"><span class="solution-mini">INTRODUCING</span><h3>Adaptive Task<br><em>Recommendation.</em></h3><p>ATR Learning mengusulkan pengalaman pembelajaran dengan eksplorasi dunia hutan dua dimensi dan <strong>game quest</strong> yang direkomendasikan berdasarkan hasil asesmen awal.</p></div>
+            <div class="solution-list"><div><span>01</span><p>Pretest berbasis quest untuk memetakan pemahaman awal.</p></div><div><span>02</span><p>Rekomendasi tingkat kesulitan misi sesuai hasil asesmen.</p></div><div><span>03</span><p>Poin, pengumpulan kunci, dan spectator mode sebagai bagian dari konsep pengalaman belajar.</p></div></div>
+          </div>
+        </div>
+        <figure class="concept-figure reveal">
+          <div class="figure-image"><img src="assets/gameplay-konsep.png" alt="Ilustrasi konsep game pembelajaran semi open world 2D: peta hutan, daftar quest Algoritma If-Else, kuis, dan leaderboard" loading="lazy" /></div>
+          <figcaption><span class="figure-label">GAMBAR 01 — ILUSTRASI GAMEPLAY</span><span>Ilustrasi proses asesmen melalui quest materi Algoritma If-Else. <strong>Visualisasi konsep, bukan game yang sudah diimplementasikan.</strong></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 04 - ALUR SISTEM -->
+    <section class="section flow-section" id="alur" aria-labelledby="flowHeading">
+      <div class="shell">
+        <div class="flow-head reveal"><div><div class="eyebrow dark"><span class="eyebrow-symbol">✦</span> HOW THE CONCEPT WORKS</div><h2 id="flowHeading">Dari langkah pertama<br>hingga <em>quest terakhir.</em></h2></div><p>Gambaran bagaimana mahasiswa dapat belajar melalui petualangan, penilaian awal, dan misi yang disesuaikan dengan kemampuan.</p></div>
+        <div class="flow-grid" id="flowGrid">
+          <button type="button" class="flow-step is-selected" data-step="0" aria-pressed="true"><span class="step-count">01 / 06</span><span class="step-icon" aria-hidden="true">◈</span><h3>Masuk ke Dunia Belajar</h3><p>Mahasiswa masuk ke web pembelajaran dan memilih mata kuliah.</p><span class="step-more">Lihat detail <span>↗</span></span></button>
+          <button type="button" class="flow-step" data-step="1" aria-pressed="false"><span class="step-count">02 / 06</span><span class="step-icon" aria-hidden="true">♧</span><h3>Eksplorasi Peta 2D</h3><p>Karakter menjelajahi hutan sesuai map mata kuliah yang diambil.</p><span class="step-more">Lihat detail <span>↗</span></span></button>
+          <button type="button" class="flow-step" data-step="2" aria-pressed="false"><span class="step-count">03 / 06</span><span class="step-icon" aria-hidden="true">✎</span><h3>Pretest Game Quest</h3><p>Asesmen awal mengukur pemahaman mahasiswa sebelum misi berikutnya.</p><span class="step-more">Lihat detail <span>↗</span></span></button>
+          <button type="button" class="flow-step" data-step="3" aria-pressed="false"><span class="step-count">04 / 06</span><span class="step-icon" aria-hidden="true">⌘</span><h3>Rekomendasi Adaptif</h3><p>Kesulitan quest disesuaikan berdasarkan hasil pretest dan progres.</p><span class="step-more">Lihat detail <span>↗</span></span></button>
+          <button type="button" class="flow-step" data-step="4" aria-pressed="false"><span class="step-count">05 / 06</span><span class="step-icon" aria-hidden="true">⚿</span><h3>Quest, Poin & Kunci</h3><p>Selesaikan misi untuk memperbarui poin dan mengumpulkan kunci.</p><span class="step-more">Lihat detail <span>↗</span></span></button>
+          <button type="button" class="flow-step" data-step="5" aria-pressed="false"><span class="step-count">06 / 06</span><span class="step-icon" aria-hidden="true">✧</span><h3>Finish atau Spectator</h3><p>Setelah seluruh quest, keluar atau mengamati mahasiswa lain.</p><span class="step-more">Lihat detail <span>↗</span></span></button>
+        </div>
+        <div class="flow-detail" aria-live="polite"><div><span class="flow-detail-label">DETAIL TAHAP <b id="flowDetailIndex">01</b></span><h3 id="flowDetailTitle">Masuk ke Dunia Belajar</h3><p id="flowDetailText">Mahasiswa mengakses halaman pembelajaran dan memilih mata kuliah. Setiap mata kuliah dapat memiliki lingkungan dan rangkaian quest yang relevan dengan materinya.</p></div><span class="flow-detail-art" aria-hidden="true">✳</span></div>
+      </div>
+    </section>
+
+    <!-- 05 - PILIH KARAKTER -->
+    <section class="section character-section" id="karakter" aria-labelledby="characterHeading">
+      <div class="shell">
+        <div class="character-heading reveal"><div class="eyebrow light"><span class="eyebrow-symbol">✦</span> MEET THE ADVENTURERS</div><h2 id="characterHeading">Setiap perjalanan punya<br><em>tokoh utamanya.</em></h2><p>Lima karakter petualang untuk membayangkan pengalaman bermain di dunia ATR Learning. Pilih karakter favorit untuk melihat profilnya.</p></div>
+        <div class="character-layout">
+          <div class="character-picker" id="characterPicker" aria-label="Pilih satu dari lima karakter petualang"></div>
+          <div class="character-preview" id="characterPreview" aria-live="polite">
+            <div class="character-preview-visual"><span class="preview-glow"></span><img id="selectedCharacterImage" src="assets/characters/bima.svg" alt="Bima, karakter penjelajah hutan" /><span class="preview-watermark">01</span></div>
+            <div class="preview-info"><span class="preview-small">CHARACTER PROFILE / <b id="selectedCharacterNum">01</b></span><div class="preview-name-row"><h3 id="selectedCharacterName">Bima</h3><span class="preview-badge" id="selectedCharacterType">PENJELAJAH</span></div><p id="selectedCharacterDesc">Petualang penuh rasa ingin tahu yang gemar menemukan jalur baru di Hutan Logika.</p><div class="preview-attributes"><div><span>PERAN</span><b id="selectedCharacterRole">Penjelajah Hutan</b></div><div><span>KEUNIKAN</span><b id="selectedCharacterTrait">Berani & teliti</b></div></div><div class="selection-note"><span class="selection-symbol" aria-hidden="true">✓</span><span id="selectedCharacterStatus">Bima sedang dipratinjau.</span></div></div>
+          </div>
+        </div>
+        <p class="character-caveat">✦ Pilihan karakter ini adalah pratinjau visual untuk memperkenalkan konsep, bukan fitur masuk ke game sesungguhnya.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+    <div class="shell footer-main">
+      <div class="footer-brand-block"><a href="#beranda" class="footer-brand"><span aria-hidden="true">✦</span> ATR <b>LEARNING</b></a><p>Memperkenalkan ide pembelajaran adaptif yang menggabungkan eksplorasi, asesmen, dan petualangan di satu dunia.</p><span class="footer-motto">DISCOVER • LEARN • EVOLVE</span></div>
+      <div class="footer-team-block"><div class="footer-small-title">OUR TEAM ON GITHUB <span aria-hidden="true">↗</span></div><div class="github-grid" id="githubGrid"></div></div>
+    </div>
+    <div class="shell footer-bottom"><span>© <span id="currentYear">2026</span> ATR Learning. All rights reserved.</span><span>Website pengenalan konsep • HTML, CSS & JavaScript</span><a href="#beranda">Kembali ke atas ↑</a></div>
+  </footer>
+</body>
+</html>
