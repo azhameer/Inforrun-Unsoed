@@ -147,3 +147,19 @@ teamMembers.forEach((member, index) => {
   git.append(icon, detail);
   githubGrid.appendChild(git);
 });
+
+// gagasan bawah
+const flowSteps = document.querySelectorAll(".flow-step");
+flowSteps.forEach(step => {
+  step.addEventListener("click", () => {
+    const index = Number(step.dataset.step);
+    flowSteps.forEach(btn => {
+      const active = btn === step;
+      btn.classList.toggle("is-selected", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+    document.querySelector("#flowDetailIndex").textContent = String(index + 1).padStart(2, "0");
+    document.querySelector("#flowDetailTitle").textContent = flowDetails[index].title;
+    document.querySelector("#flowDetailText").textContent = flowDetails[index].text;
+  });
+});
