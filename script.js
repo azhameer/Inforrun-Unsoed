@@ -17,3 +17,13 @@ const characters = [
   { id: "sora", name: "Sora", gender: "Perempuan", number: "04", type: "PENGAMAT", role: "Pengamat Alam", trait: "Cermat & kreatif", description: "Peka terhadap detail lingkungan dan senang mengamati berbagai cara menyelesaikan misi.", color: "#8e789e", image: "assets/characters/sora.svg" },
   { id: "kirana", name: "Kirana", gender: "Perempuan", number: "05", type: "PENEMU", role: "Pencari Kunci", trait: "Gigih & adaptif", description: "Tertarik dengan tantangan baru serta pantang menyerah sampai kunci terakhir ditemukan.", color: "#ad8053", image: "assets/characters/kirana.svg" }
 ];
+
+// gagasan atas
+const flowDetails = [
+  { title: "Masuk ke Dunia Belajar", text: "Mahasiswa mengakses web pembelajaran dan memilih mata kuliah. Setiap mata kuliah dapat memiliki lingkungan dan rangkaian quest yang relevan dengan materinya." },
+  { title: "Eksplorasi Peta 2D", text: "Mahasiswa bebas menjelajahi area yang tersedia pada peta semi-open world dua dimensi, menemukan lokasi misi, serta mempelajari materi yang terhubung dengan lingkungan game." },
+  { title: "Pretest Berbasis Game Quest", text: "Asesmen awal dikemas menjadi quest dengan pertanyaan pemahaman dasar. Hasil jawaban menjadi indikator awal untuk memetakan tingkat penguasaan materi mahasiswa." },
+  { title: "Rekomendasi Misi Adaptif", text: "Berdasarkan hasil pretest, sistem yang diusulkan akan merekomendasikan quest dengan tingkat kesulitan lebih sesuai. Performa pada misi berikutnya dapat menjadi masukan untuk rekomendasi selanjutnya." },
+  { title: "Quest, Poin dan Pengumpulan Kunci", text: "Mahasiswa menyelesaikan kuis atau materi di tiap quest. Daftar quest bergeser ke tahap berikutnya, poin diperbarui, dan kunci diperoleh setelah misi memenuhi syarat penyelesaian." },
+  { title: "Selesaikan atau Masuk Spectator", text: "Setelah semua quest dan kunci diselesaikan, mahasiswa dapat menuju pintu keluar atau, pada konsep pengembangan game sesungguhnya, mengamati aktivitas pemain lain melalui spectator mode." }
+];
